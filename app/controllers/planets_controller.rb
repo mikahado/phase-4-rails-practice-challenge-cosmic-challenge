@@ -4,9 +4,4 @@ class PlanetsController < ApplicationController
         render json: Planet.all
     end
 
-    def show
-        render json: @scientist, serializer: ScientistWithPlanetsSerializer
-    end
-
-
 end
