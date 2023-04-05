@@ -3,8 +3,8 @@ class ScientistsController < ApplicationController
     before_action :set_scientist, only: [:show, :update, :destroy]
 
     def index
-        scientists = Scientist.all
-        render json: scientists
+        render json: Scientist.all
+        
     end
 
     def show
