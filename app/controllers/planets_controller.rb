@@ -4,4 +4,5 @@ class PlanetsController < ApplicationController
         render json: Planet.all
     end
 
+
 end
