@@ -1,0 +1,30 @@
+TASKS
+
+1.Implement search functionality so I can search for a planet by name. 
+TASK COMPLETED IN 19 MINUTES
+
+2.Set up a button with the text "Pluto Specialist". When I click the button I want to see all of the scientists who have a field of study of "Pluto Specialist"
+    Additional Challenge: Set up another button that renders only the missions of those scientists (ADDITIONAL CHALLENGE 20m)
+
+TASK 2 COMPLETED IN 12 MINUTES
+
+3. Add a column to your missions table called "length_in_days" of type integer. Create a button with the text "Long missions" that renders all the missions that are longer than 30 days.
+    Additional Challenge: Set up a form so a User can search for missions by length in days
+
+TASK 3 COMPLETED IN 18 MINUTES
+
+ADDITIONAL CHALLENGE: 
+
+1. create new migration
+2. create button with onClick event listeners. 
+3. handle click to GET request
+4. custom routes
+5. new action in controller 
+6. query and return json
+7. handle response to state
+8. display missions
+
+Notes:
+All of these should be accomplished by a new GET request and backend route
+You will probably want to make some seed data
+Use Active Record query methods wherever possible

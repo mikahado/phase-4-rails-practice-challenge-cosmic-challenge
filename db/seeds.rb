@@ -14,6 +14,10 @@ Faker::TvShows::StarTrek.unique.clear
 Faker::Space.unique.clear
 Faker::TvShows::Buffy.unique.clear
 
+fields = ["Pluto Specialist", "Earth Specialist", "Trillian Specialist", "Saturn Specialist"]
+
+length = [64, 2, 45, 22, 36, 45, 57, 59, 534, 422, 23, 876, 434, 642, 543, 4567,2, 5, 66, 34, 2, 5, 7]
+
 puts "Making planets..."
 20.times {Planet.create(name: Faker::TvShows::StarTrek.unique.location,
                         distance_from_earth: Faker::Space.unique.distance_measurement,
@@ -22,12 +26,13 @@ puts "Making planets..."
 
 puts "Making scientists..."                        
 15.times {Scientist.create(name: Faker::FunnyName.name,
-                           field_of_study: Faker::Educator.subject,
+                           field_of_study: fields.sample,
                            avatar: Faker::Avatar.image(size: "200x200", set: "set3"))}
 
 puts "Making missions..."                           
 20.times {Mission.create(name: Faker::TvShows::Buffy.unique.episode,
                          scientist: Scientist.all.sample, 
-                         planet: Planet.all.sample)}
+                         planet: Planet.all.sample,
+                         length_in_days: length.sample)}
 
 puts "Done seeding!"                         

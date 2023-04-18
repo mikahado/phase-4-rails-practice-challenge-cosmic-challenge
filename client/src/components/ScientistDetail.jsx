@@ -77,6 +77,7 @@ function ScientistDetail() {
   
   return (
     <div>
+  
         <h2>Scientist Profile:</h2>
         <img src={scientist.avatar} alt={scientist.name} />
         <h3>{scientist.name}</h3>

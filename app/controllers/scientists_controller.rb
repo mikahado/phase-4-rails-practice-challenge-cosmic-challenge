@@ -25,6 +25,11 @@ class ScientistsController < ApplicationController
         head :no_content
     end
 
+    def pluto
+        scientists = Scientist.where('field_of_study = ?', 'Pluto Specialist')
+        render json: scientists
+    end
+
     private
 
     def set_scientist
