@@ -5,7 +5,7 @@ class PlanetsController < ApplicationController
     end
 
     def search
-        planet = Planet.where('LOWER(name) LIKE ?', params[:search].downcase)
+        planet = Planet.where('name = ?', + params[:search] )
         render json: planet
     end
 

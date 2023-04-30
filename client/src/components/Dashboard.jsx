@@ -59,9 +59,8 @@ const displayPlutoMissions = plutoMission.map(m =>
 
   let pluCards = plutoSpecialists.map(plu => <ScientistCard key={plu.id} scientist={plu} onDelete={handleDeleteScientist}/>)
 
-  const handleClick = (e) => {
-    e.preventDefault() 
-
+  const handleClick = () => {
+ 
     fetch('/pluto_specialists')
     .then(resp => resp.json())
     .then(data => setPlutoSpecialists(data))

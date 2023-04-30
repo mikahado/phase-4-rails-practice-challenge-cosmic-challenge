@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   resources :scientists
 
   get '/search-planet/:search', to: 'planets#search'
+
   get '/pluto_specialists', to: 'scientists#pluto'
-  get '/pluto_specialists_mission', to: 'missions#pluto_missions'
+  get '/pluto_specialists_mission', to: 'scientists#pluto_missions'
   get '/mission_length', to: 'missions#length'
   get '/long-search/:days', to: 'missions#search_length'
   

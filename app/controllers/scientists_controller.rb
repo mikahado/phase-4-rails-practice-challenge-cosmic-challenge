@@ -30,6 +30,15 @@ class ScientistsController < ApplicationController
         render json: scientists
     end
 
+    def pluto_missions
+        # missions = Scientist.joins(:missions).where('field_of_study = ?', 'Pluto Specialist')
+        scientists = Scientist.where('field_of_study = ?', 'Pluto Specialist')
+       
+        missions = scientists.map{|s| s.missions }
+
+        render json: missions
+    end
+
     private
 
     def set_scientist
@@ -40,5 +49,4 @@ class ScientistsController < ApplicationController
         params.permit(:name, :field_of_study, :avatar)
     end
 
- 
 end
